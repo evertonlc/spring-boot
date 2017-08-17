@@ -41,4 +41,11 @@ public class PessoaResource {
         Pessoa pessoa = pessoaRepository.findOne(codigo);
         return Optional.ofNullable(pessoa).map(cat -> ResponseEntity.ok().body(cat)).orElse(ResponseEntity.notFound().build());
     }
+
+    @DeleteMapping("/{codigo}")
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    public void remover(@PathVariable Long codigo) {
+        pessoaRepository.delete(codigo);
+    }
+
 }

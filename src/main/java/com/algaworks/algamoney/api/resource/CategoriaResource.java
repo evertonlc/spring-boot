@@ -41,4 +41,10 @@ public class CategoriaResource {
         Categoria categoria = categoriaRepository.findOne(codigo);
         return Optional.ofNullable(categoria).map(cat -> ResponseEntity.ok().body(cat)).orElse(ResponseEntity.notFound().build());
     }
+
+    @DeleteMapping("/{codigo}")
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    public void remover(@PathVariable Long codigo) {
+        categoriaRepository.delete(codigo);
+    }
 }
