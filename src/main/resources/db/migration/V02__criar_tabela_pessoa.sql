@@ -25,3 +25,11 @@ INSERT INTO pessoa (nome, ativo)
 VALUES ('Fulando de Tal', TRUE);
 INSERT INTO pessoa (nome, ativo)
 VALUES ('Virgulino Ferreira', FALSE);
+INSERT INTO pessoa (nome, ativo)
+VALUES ('Antonio Conselheiro', FALSE);
+INSERT INTO pessoa (nome, ativo)
+VALUES ('Valdemar Acosta', FALSE);
+INSERT INTO pessoa (nome, ativo)
+VALUES ('Franscisco Guilherme', FALSE);
+INSERT INTO pessoa (nome, ativo)
+VALUES ('Boris Casoy', FALSE);
