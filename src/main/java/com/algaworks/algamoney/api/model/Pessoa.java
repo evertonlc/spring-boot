@@ -1,5 +1,7 @@
 package com.algaworks.algamoney.api.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 
@@ -37,7 +39,7 @@ public class Pessoa {
         this.nome = nome;
     }
 
-    public Boolean getAtivo() {
+    public Boolean isAtivo() {
         return ativo;
     }
 
@@ -51,5 +53,11 @@ public class Pessoa {
 
     public void setEndereco(Endereco endereco) {
         this.endereco = endereco;
+    }
+
+    @JsonIgnore
+    @Transient
+    public boolean isInativo() {
+        return !isAtivo();
     }
 }
